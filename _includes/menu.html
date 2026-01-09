@@ -1,5 +1,12 @@
 <!-- 공통 메뉴 영역 -->
 <nav class="menu">
+  <!-- 햄버거 버튼 (☰ 아이콘) -->
+  <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
+    <!-- 유니코드 ☰ 문자 -->
+    &#9776;
+  </div>
+
+  <!-- 실제 메뉴 목록 -->
   <ul>
     <!-- 첫 번째 메뉴 항목: 홈 -->
     <li><a href="{{ '/' | relative_url }}">홈</a></li>
@@ -20,33 +27,6 @@
             <li><a href="{{ '/ml.html' | relative_url }}">머신러닝</a></li>
           </ul>
         </li>
-      </ul>
-    </li>
-
-    <!-- 세 번째 메뉴 항목: 연락처 -->
-    <li><a href="{{ '/contact.html' | relative_url }}">연락처</a></li>
-  </ul>
-</nav>
-
-<!-- 공통 메뉴 영역 -->
-<nav class="menu">
-  <!-- 햄버거 버튼 (☰ 아이콘) -->
-  <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
-    <!-- 유니코드 ☰ 문자 -->
-    &#9776;
-  </div>
-
-  <!-- 실제 메뉴 목록 -->
-  <ul>
-    <!-- 첫 번째 메뉴 항목: 홈 -->
-    <li><a href="{{ '/' | relative_url }}">홈</a></li>
-
-    <!-- 두 번째 메뉴 항목: 연구 (하위 메뉴 포함) -->
-    <li>
-      <a href="#">연구</a>
-      <ul>
-        <li><a href="{{ '/papers.html' | relative_url }}">논문</a></li>
-        <li><a href="{{ '/projects.html' | relative_url }}">프로젝트</a></li>
       </ul>
     </li>
 
