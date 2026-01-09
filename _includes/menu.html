@@ -27,3 +27,73 @@
     <li><a href="{{ '/contact.html' | relative_url }}">연락처</a></li>
   </ul>
 </nav>
+
+/* 기본 메뉴 스타일 */
+.menu ul {
+  list-style: none;   /* 목록 점 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu > ul > li {
+  display: inline-block; /* PC에서는 가로로 나열 */
+  margin-right: 20px;
+}
+
+.menu ul ul {
+  display: none;          /* 기본은 숨김 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 10px;
+}
+
+.menu ul ul li {
+  display: block;         /* 하위 메뉴는 세로로 나열 */
+  margin: 5px 0;
+}
+
+.menu a {
+  color: #fff;            /* 글자색 흰색 */
+  text-decoration: none;  /* 밑줄 제거 */
+  padding: 5px 10px;
+}
+
+.menu li:hover > ul {
+  display: block;         /* PC에서 마우스 올리면 하위 메뉴 표시 */
+}
+
+/* 햄버거 버튼 기본 설정 (PC에서는 숨김) */
+.hamburger {
+  display: none;          /* 기본은 숨김 */
+  font-size: 24px;        /* 아이콘 크기 */
+  cursor: pointer;        /* 클릭 가능 */
+}
+
+/* 화면 너비가 768px 이하일 때 적용 (모바일) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;       /* 모바일에서는 햄버거 버튼 표시 */
+  }
+
+  .menu > ul {
+    display: none;        /* 기본 메뉴 숨김 */
+    flex-direction: column; /* 세로로 나열 */
+    background: #333;
+    padding: 10px;
+  }
+
+  .menu.active > ul {
+    display: flex;        /* 햄버거 버튼 클릭 시 메뉴 표시 */
+  }
+
+  .menu > ul > li {
+    display: block;       /* 모바일에서는 세로로 메뉴 표시 */
+    margin: 10px 0;
+  }
+}
