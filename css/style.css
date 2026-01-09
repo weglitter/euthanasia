@@ -17,7 +17,7 @@
 }
 
 .menu > ul > li {
-  display: inline-block; /* PC에서는 가로로 나열 */
+  display: block; /* 세로로 나열 */
   margin-right: 20px;
 }
 
@@ -56,25 +56,20 @@
 }
 
 
-/* 햄버거 버튼 */
-.hamburger {
-  display: none;         /* 기본은 숨김 */
-  font-size: 24px;
-  cursor: pointer;
-  color: #000;           /* 햄버거 버튼 글씨도 검정 */
-  background: #eee;      /* 버튼 배경 회색(흰색은 fff) */
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  position: absolute; /* 메뉴 상단 오른쪽 고정 */ 
-  right: 10px; 
-  top: 10px;
-}
-
 /* 모바일 화면 */
 @media (max-width: 768px) {
   .hamburger {
     display: block;      /* 모바일에서만 표시 */
+    font-size: 19px;
+    color: #000;           /* 햄버거 버튼 글씨도 검정 */
+    cursor: pointer;
+    background: #eee;      /* 버튼 배경 회색(흰색은 fff) */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: bottom; /*  */ 
+    right: 10px; 
+    top: 10px;
   }
   .menu > ul {
     display: none;       /* 기본 메뉴 숨김 */
