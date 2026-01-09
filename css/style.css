@@ -1,3 +1,49 @@
+/* 메뉴 전체의 기본 설정 */
+.menu ul {
+  list-style: none;   /* 기본 목록 점(●) 없애기 */
+  padding: 0;         /* 안쪽 여백 제거 */
+  margin: 0;          /* 바깥 여백 제거 */
+}
+
+/* 각 메뉴 항목(li)의 기본 설정 */
+.menu li {
+  position: relative; /* 하위 메뉴를 부모 기준으로 위치시키기 위해 relative 사용 */
+}
+
+/* 최상위 메뉴(바로 보이는 메뉴들) 설정 */
+.menu > ul > li {
+  display: inline-block; /* 가로로 나열 */
+  margin-right: 20px;    /* 메뉴 간격 띄우기 */
+}
+
+/* 하위 메뉴(드롭다운) 기본 설정 */
+.menu ul ul {
+  display: none;          /* 기본은 숨김 상태 */
+  position: absolute;     /* 부모 메뉴 바로 아래에 위치 */
+  top: 100%;              /* 부모 메뉴의 아래쪽에 표시 */
+  left: 0;                /* 부모 메뉴의 왼쪽 기준으로 정렬 */
+  background: #333;       /* 배경색: 짙은 회색 */
+  padding: 10px;          /* 안쪽 여백 */
+}
+
+/* 하위 메뉴 항목(li) 설정 */
+.menu ul ul li {
+  display: block;         /* 세로로 나열 */
+  margin: 5px 0;          /* 항목 간격 */
+}
+
+/* 메뉴 링크(a) 기본 스타일 */
+.menu a {
+  color: #fff;            /* 글자색: 흰색 */
+  text-decoration: none;  /* 밑줄 제거 */
+  padding: 5px 10px;      /* 글자 주변 여백 */
+}
+
+/* 마우스를 올렸을 때 하위 메뉴 표시 */
+.menu li:hover > ul {
+  display: block;         /* 숨겨진 하위 메뉴를 보이게 함 */
+}
+
 /* ================================
    기본 색상 및 글꼴 설정
    ================================ */
